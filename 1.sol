@@ -4,8 +4,9 @@ contract mod1{
     uint a=5;
     uint b=7;
     function req()public view returns(uint){
-        uint z = b - a;
+        uint z;
         require(z>2,"z should be greater than 2");
+        z = b - a;
         return z;
     }
     function rev(uint c)public pure{
@@ -16,7 +17,7 @@ contract mod1{
         
     }
     function asser()public view returns(uint){
-        assert(a>1 && b>1);
+        assert(a*b*a*b>10000 || b*a*b*a>10000);
         return a*b;
     }
     
